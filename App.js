@@ -12,6 +12,7 @@ import { inject, observer } from 'mobx-react'
 import auth from '@react-native-firebase/auth';
 import PropTypes from 'prop-types';
 import Auth from './src/mobx/auth'
+import Contests from './src/screens/contests/Contests'
 
 const Stack = createNativeStackNavigator()
 
@@ -35,6 +36,7 @@ function App({ authStore, miscStore }) {
           </> :
           <>
             <Stack.Screen name="HomeScreen" component={Home} />
+            <Stack.Screen name="Contests" component={Contests} />
           </>}
         </Stack.Navigator>
       </NavigationContainer>

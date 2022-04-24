@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native'
 import Colors from './Colors'
+import { FONT_SIZE, FONT_WEIGHT } from './statics'
 
 export const basicStyles = StyleSheet.create({
   rowSpaceBetween: {
@@ -29,9 +30,10 @@ export const regularText = StyleSheet.create({
 })
 
 export const getText = (size, bold, color) => {
+  var fontFamily = bold == FONT_WEIGHT.BOLD ? 'Sansation_Bold' : 'Sansation_Regular'
   return {
     fontSize: size,
-    fontWeight: bold,
-    color: color
+    color: color,
+    fontFamily: fontFamily
   }
 }
